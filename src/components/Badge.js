@@ -6,22 +6,24 @@ import conflogo from '../images/badge-header.svg';
 
 class Badge extends React.Component{
     render () {
+        const {firstName, lastName, avatarUrl, jobTitle, twitterAccount} = this.props
+        // es igual que poner {this.props.firstName}
         return (
            <div className="Badge">
                 <div className="Badge__header">
-                    <img src={conflogo} alt="Logo de la conferencia"></img>
+                    <img src={conflogo} alt="Logo de la conferencia"/>
                 </div>
                
                 <div className="Badge__section-name">
                     <img className="Badge__avatar" 
-                        src="http://1.gravatar.com/avatar/3193d0e6c6859d752a3cf338eba913da" 
-                        alt="Avatar"></img>
-                    <h1>Daniel <br/> Alvarado T.</h1>
+                        src={avatarUrl}
+                        alt="Avatar"/>
+                    <h1>{firstName} <br/>{lastName}</h1>
                 </div>
 
                 <div className="Badge__section-info">
-                    <p>Fronted Engineer</p>
-                    <p>@dalvarado</p>
+                    <p>{jobTitle}</p>
+                    <p>@{twitterAccount}</p>
                 </div>
                 <div className="Badge__footer">
                     #platziconf
