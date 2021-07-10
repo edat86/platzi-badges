@@ -9,16 +9,16 @@ class BadgeForm extends React.Component {
         console.log("button on click");
     };
 
-    handleClick = e =>{
-        console.log("button on submit");
+    handleSubmit = e =>{
         e.preventDefault();
+        console.log("button on submit");
     };
 
     render(){
         return (
             <div>
                 <h1>New Attendat</h1>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>First Name</label>
                         <input onChange={this.handleChange} type="text" className="form-control" name="firstName"></input>
@@ -32,7 +32,6 @@ class BadgeForm extends React.Component {
                     <div className="form-group">
                         <br/>
                         <button onClick={this.handleClick} className="btn btn-primary" type="button">Save</button>
-                        <button onClick={this.handleClick} className="btn btn-primary" type="submit">typeSubmit</button>
                     </div>
                 </form>
             </div>
