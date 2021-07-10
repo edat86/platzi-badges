@@ -1,0 +1,4 @@
+## Manejo de estado
+Cuando manejas estados en react utilizamos `setState`, pero cuando utilizamos `setState`  lo que sucede que estamos guardando en dos lados. Estamos guardando en cada input en el `value` y en el `setState`.
+Debemos cambiar nuestros input de estar en modo no controlado a controlado. Es en el value de cada input que lo que hara es leer el estado `this.state` y si queremos escribir usamos `this.setState`.
+Para utilizar `state` debemos iniciarlo en el componente, esto lo podemos escribir en cualquier parte de nuestro codigo. Lo reconmendable es iniciarlo al inicio del componente `state = {}` como un objeto vacio
